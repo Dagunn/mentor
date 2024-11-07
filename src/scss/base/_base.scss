@@ -1,0 +1,57 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bgColor);
+  font-family: 'SF UI Display', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--dark);
+  line-height: 16px;
+  padding: 48px 0;
+
+  @media (width<=1024px) {
+    padding: 32px 0;
+  }
+
+  @media (width<=744) {
+    padding: 24px 0;
+  }
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+.btn {
+  background-color: var(--dark);
+  border-radius: var(--border-radius);
+  padding: 22px;
+  height: 64px;
+  font-weight: 600;
+  color: var(--white);
+  width: 100%;
+  transition: opacity 0.3s;
+
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  @media (width<=744px) {
+    height: 48px;
+    padding: 15px;
+  }
+}
